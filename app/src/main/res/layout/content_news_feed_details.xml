@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGray"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activities.ArticleDetailsActivity"
+    tools:showIn="@layout/app_bar_feed_news">
+
+    <Switch
+        android:id="@+id/asasasasasass"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+                <ImageView
+                    android:id="@+id/detPostImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/img_detail_height"
+                    android:adjustViewBounds="true"
+                    android:background="@color/lightGray"
+                    android:scaleType="fitXY" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    tools:ignore="RtlSymmetry">
+
+                    <View
+                        android:background="@android:color/black"
+                        android:alpha="0.3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <ImageView
+                        android:id="@+id/detNavBackImg"
+                        android:layout_width="@dimen/_40dp"
+                        android:layout_height="@dimen/_40dp"
+                        android:src="@drawable/back_icon"
+                        android:layout_margin="@dimen/_10dp"
+                        android:layout_marginEnd="@dimen/_10dp" />
+
+                    <TextView
+                        android:id="@+id/detTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:layout_marginBottom="@dimen/_50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/avenir_medium"
+                        android:hint="@string/title_word"
+                        android:lineSpacingExtra="@dimen/_7dp"
+                        android:maxLines="2"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40dp"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:layout_marginEnd="@dimen/_10dp"
+                        android:layout_marginBottom="@dimen/_7dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true">
+
+                        <LinearLayout
+                            android:id="@+id/sinceDateLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/avenir_book"
+                                android:text="@string/posted"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15sp" />
+                            <TextView
+                                android:id="@+id/detPostedSince"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/avenir_book"
+                                android:text="@string/postedTime"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/detReadingTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/sinceDateLayout"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toEndOf="@id/sinceDateLayout"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:paddingTop="@dimen/_7dp"
+                            android:paddingBottom="@dimen/_7dp"
+                            android:paddingStart="@dimen/_10dp"
+                            android:paddingEnd="@dimen/_10dp"
+                            android:layout_marginEnd="@dimen/_7dp"
+                            android:background="@drawable/shape_category"
+                            android:fontFamily="@font/avenir_book"
+                            android:text="@string/readingTime"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_12sp"/>
+
+                        <CheckBox
+                            android:id="@+id/saveArticleChkBx"
+                            android:layout_width="@dimen/_35dp"
+                            android:layout_height="@dimen/_30dp"
+                            android:button="@null"
+                            android:background="@drawable/unfavorite_article"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/_30dp"
+                            android:layout_marginStart="@dimen/_50dp"/>
+
+                        <Button
+                            android:id="@+id/detShare"
+                            android:layout_width="@dimen/_25dp"
+                            android:layout_height="@dimen/_30dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="10dp"
+                            android:background="@android:drawable/ic_menu_share"
+                            android:gravity="end"
+                            android:padding="5dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/savingPBArticleDet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:visibility="invisible"
+                style="?android:attr/progressBarStyleHorizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30dp"
+                android:layout_marginEnd="@dimen/_30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/detContentTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="@dimen/_10dp"
+                    android:lineSpacingExtra="@dimen/lineSpacing"
+                    android:maxLines="2"
+                    android:text="@string/articleTitle"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/detContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="15dp"
+                    android:fontFamily="@font/avenir_book"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

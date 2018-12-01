@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.NavigationView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentNav"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:fitsSystemWindows="false"
+    android:background="@drawable/gradient"
+    app:elevation="100dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/_10dp"
+            android:paddingEnd="@dimen/_10dp"
+            android:orientation="vertical"
+            android:background="@android:color/transparent">
+
+            <include layout="@layout/nav_header_main"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_10dp"
+                android:text="@string/your_topics"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_or_remove_topics"
+                android:textColor="@color/fontColor" />
+
+
+            <ListView
+                android:id="@+id/topicList"
+                android:layout_width="match_parent"
+                android:minHeight="@dimen/_40dp"
+                android:scrollbarStyle="insideOverlay"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/add_topicsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@android:drawable/ic_menu_add"/>
+                <TextView
+                    android:text="@string/add_topics"
+                    android:textColor="@color/fontColor"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/saved_article"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:paddingBottom="@dimen/_10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/save_article_to_read"
+                android:textColor="@color/fontColor"/>
+
+            <ListView
+                android:id="@+id/articleList"
+                android:layout_width="match_parent"
+                android:scrollbarStyle="insideOverlay"
+                android:minHeight="@dimen/_40dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/nav_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_10dp"
+                android:paddingTop="@dimen/_10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@android:drawable/ic_menu_manage"/>
+                <TextView
+                    android:text="@string/setting"
+                    android:textColor="@color/lightGray"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nav_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5dp"
+                android:paddingBottom="@dimen/_10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:backgroundTint="@color/white"
+                    android:src="@android:drawable/ic_lock_power_off"/>
+                <TextView
+                    android:text="@string/logout"
+                    android:textColor="@color/lightGray"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.design.widget.NavigationView>

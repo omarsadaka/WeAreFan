@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="basicAppColor">#681616</color>
+    <color name="lightGray">#F2F2F2</color>
+    <color name="white">#ffffff</color>
+
+    <color name="start_color">#FFFB8166</color>
+    <color name="end_color">#F9727E</color>
+    <color name="search_color">#a94141</color>
+    <color name="fontColor">#bcbabc</color>
+    <color name="basicBackground">#F2F2F2</color>
+    <color name="placeHolderBackground">#dddddd</color>
+    <color name="dark_gray">#bcbaba</color>
+    <color name="light_black">#252424</color>
+</resources>

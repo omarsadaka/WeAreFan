@@ -1,0 +1,28 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_height">150dp</dimen>
+    <dimen name="item_height">60dp</dimen>
+
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="_10dp">10dp</dimen>
+    <dimen name="_7dp">7dp</dimen>
+    <dimen name="_30dp">30dp</dimen>
+    <dimen name="_25dp">25dp</dimen>
+    <dimen name="_20sp">20sp</dimen>
+    <dimen name="_15sp">15sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="_5dp">5dp</dimen>
+    <dimen name="_40dp">40dp</dimen>
+    <dimen name="img_detail_height">350dp</dimen>
+    <dimen name="_20dp">20dp</dimen>
+    <dimen name="_12sp">12sp</dimen>
+    <dimen name="lineSpacing">12dp</dimen>
+    <dimen name="custom_text_background_height">25dp</dimen>
+    <dimen name="_35dp">35dp</dimen>
+
+    <dimen name="_8dp">8dp</dimen>
+    <dimen name="_100dp">100dp</dimen>
+    <dimen name="_50dp">50dp</dimen>
+    <dimen name="_15dp">15dp</dimen>
+</resources>

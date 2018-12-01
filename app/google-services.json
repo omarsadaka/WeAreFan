@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "158235896596",
+    "firebase_url": "https://stadfm-3b5a8.firebaseio.com",
+    "project_id": "stadfm-3b5a8",
+    "storage_bucket": "stadfm-3b5a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158235896596:android:566e27536b9fc702",
+        "android_client_info": {
+          "package_name": "com.organizers_group.stadfm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158235896596-ld9gkd4icugqt02mrc7cil584ngq1pqp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.organizers_group.stadfm",
+            "certificate_hash": "c77c083585c266b4131a9b197230ab0d99f3f423"
+          }
+        },
+        {
+          "client_id": "158235896596-frpfhnailkraktk4cri3bhjouea9raum.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwZJMUJs0Cp3gPjnm-s0w1szwFWvxRQm8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "158235896596-frpfhnailkraktk4cri3bhjouea9raum.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

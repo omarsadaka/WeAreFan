@@ -1,0 +1,121 @@
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/basicBackground">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="20dp"
+        android:elevation="12dp"
+        android:layout_centerHorizontal="true"
+        android:innerRadius="0dp"
+        android:shape="ring"
+        android:thicknessRatio="1.9">
+
+
+        <LinearLayout
+            android:background="@android:color/transparent"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/postImageView"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/img_not_found" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_10dp">
+
+                <TextView
+                    android:id="@+id/trendingTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/title_word"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_15sp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"/>
+
+                <TextView
+                    android:id="@+id/trendingSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/summary"
+                    android:textColor="@color/fontColor"
+                    android:textSize="@dimen/_12sp"
+                    android:textStyle="bold"
+                    android:maxLines="2"
+                    android:ellipsize="marquee"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/saveArticleChkBx"
+                        android:layout_width="@dimen/_35dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:button="@null"
+                        android:background="@drawable/unfavorite_article"
+                        />
+
+                    <TextView
+                        android:id="@+id/trendingCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/custom_text_background_height"
+                        android:paddingStart="@dimen/_10dp"
+                        android:paddingEnd="@dimen/_10dp"
+                        android:paddingTop="@dimen/_5dp"
+                        android:paddingBottom="@dimen/_5dp"
+                        android:gravity="center"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/shape_category"
+                        android:fontFamily="@font/avenir_book"
+                        android:hint="@string/category"
+                        android:textScaleX="1.0"
+                        android:letterSpacing="0.1"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_12sp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/savingPBTrending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:visibility="invisible"
+                style="?android:attr/progressBarStyleHorizontal" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>

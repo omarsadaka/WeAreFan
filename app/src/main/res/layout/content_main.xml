@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/basicBackground"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activities.ArticleDetailsActivity"
+    tools:showIn="@layout/app_bar_feed_news">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/verticalRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                />
+
+            <io.supercharge.shimmerlayout.ShimmerLayout
+                android:id="@+id/shimmer_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:shimmer_animation_duration="1200">
+
+                <!-- Adding 7 rows of placeholders -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <include layout="@layout/place_holder_main" />
+                    <include layout="@layout/place_holder_main" />
+                    <include layout="@layout/place_holder_main" />
+
+                </LinearLayout>
+
+            </io.supercharge.shimmerlayout.ShimmerLayout>
+
+            <Button
+                style="@style/AppTheme.RoundedCornerMaterialButton"
+                android:id="@+id/nextText"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30dp"
+                android:paddingStart="@dimen/_40dp"
+                android:paddingEnd="@dimen/_40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textScaleX="1.5"
+                android:letterSpacing="0.1"
+                android:text="@string/next"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="@font/avenir_book"
+                android:textSize="16sp"/>
+
+            <ProgressBar
+                android:id="@+id/nextPB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:visibility="invisible"
+                style="?android:attr/progressBarStyleInverse" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
